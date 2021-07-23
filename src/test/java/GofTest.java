@@ -34,8 +34,9 @@ class GofTest {
         game.setLifeAlive(0,3);
         game.setLifeAlive(1,2);
         game.setLifeAlive(2,3);
-        game.setLifeAlive(1,3);
+        game.setLifeAlive(1,4);
         game.printBoard();
+        assertEquals(4, game.numOfNeighbours(1,3));
     }
 
     @Test void checkLifePopulation(){
@@ -48,7 +49,7 @@ class GofTest {
         game.setLifeDead(4,4);
         game.printBoard();
 
-        // NOTE There are 5 lives and (8*8)= 64 total-space which brings 5/64 = 7.81
+        // NOTE There are 5 lives and (8*8)= 64 total life-space which brings 5/64 = 7.81 population
         assertEquals("7.81%", game.lifePopulation());
     }
 
