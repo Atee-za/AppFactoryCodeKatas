@@ -14,13 +14,13 @@ public class ConsoleSimulation {
 
         Gof life = new Gof(width, height, random);
 
-        ///*Manually Assigning Life
+        /*Manually Assigning Life
         life.setLifeAlive(2, 3);
         life.setLifeAlive(3, 4);
         life.setLifeAlive(4, 4);
         life.setLifeAlive(4, 3);
         life.setLifeAlive(4, 2);
-        //*/
+        */
 
         for (int i = 0; i < generations; i++) {
             life.simulateLife();
