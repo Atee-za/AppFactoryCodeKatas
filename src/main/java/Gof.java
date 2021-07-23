@@ -27,7 +27,7 @@ public class Gof {
         }
     }
 
-    private void printBoard() {
+    public void printBoard() {
         System.out.println("---");
         for (int x = 0; x < width; x++) {
             String border = "|  ";
@@ -49,11 +49,19 @@ public class Gof {
         this.board[x][y] = 1;
     }
 
+    public boolean isAlive(int x, int y){
+        return this.board[x][y] == 1;
+    }
+
+    public boolean isDead(int x, int y){
+        return this.board[x][y] == 0;
+    }
+
     public void setLifeDead(int x, int y) {
         this.board[x][y] = 0;
     }
 
-    private int numOfNeighbours(int x, int y) {
+    public int numOfNeighbours(int x, int y) {
         int count = 0;
         count += getState(x - 1, y - 1);
         count += getState(x, y - 1);
@@ -75,7 +83,7 @@ public class Gof {
         return this.board[x][y];
     }
 
-    private void updateBoard() {
+    public void simulateLife() {
         int[][] newBoard = new int [width][height];
 
         for (int x = 0; x < width; x++) {
@@ -99,7 +107,7 @@ public class Gof {
         this.board = newBoard;
     }
 
-    private String lifePopulation(){
+    public String lifePopulation(){
         int sum = 0;
         final double totalBlocks = width*height;
         for (int x = 0; x < width; x++) {
@@ -111,8 +119,8 @@ public class Gof {
         return String.format("%.2f%s", population,"%");
     }
 
-    public void simulateLife(){
+    public void updateBoard(){
         printBoard();
-        updateBoard();
+        simulateLife();
     }
 }

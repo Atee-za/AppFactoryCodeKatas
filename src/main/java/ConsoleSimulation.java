@@ -23,7 +23,7 @@ public class ConsoleSimulation {
         */
 
         for (int i = 0; i < generations; i++) {
-            life.simulateLife();
+            life.updateBoard();
         }
     }
 }
