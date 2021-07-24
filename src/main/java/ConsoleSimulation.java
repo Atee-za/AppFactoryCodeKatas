@@ -12,7 +12,7 @@ public class ConsoleSimulation {
         System.out.println("Lastly, how many generations do you want to see?: ");
         int generations = sc.nextInt();
 
-        Gof life = new Gof(width, height, random);
+        Gol life = new Gol(width, height, random);
 
         /*Manually Assigning Life
         life.setLifeAlive(2, 3);

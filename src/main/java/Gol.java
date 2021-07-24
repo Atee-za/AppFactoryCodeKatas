@@ -1,10 +1,10 @@
 import java.util.Random;
 
-public class Gof {
+public class Gol {
     private int width, height, generation, random;
     private int[][] board;
 
-    public Gof(int width, int height, int random) {
+    public Gol(int width, int height, int random) {
         this.width = width;
         this.height = height;
         this.generation = 0;

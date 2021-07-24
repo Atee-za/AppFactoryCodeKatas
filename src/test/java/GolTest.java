@@ -3,10 +3,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class GofTest {
-    Gof game;
+class GolTest {
+    Gol game;
     @BeforeEach void setup(){
-        game = new Gof(8, 8, 0);
+        game = new Gol(8, 8, 0);
     }
 
     @Test void testIsAlive() {
