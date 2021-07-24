@@ -9,6 +9,17 @@ class GolTest {
         game = new Gol(8, 8, 0);
     }
 
+    @Test void testSetAlive(){
+        game.setLifeAlive(5,5);
+        game.printBoard();
+        assertEquals(1,game.board[5][5]);
+    }
+
+    @Test void testSetDead(){
+        game.printBoard();
+        assertEquals(0,game.board[5][5]);
+    }
+
     @Test void testIsAlive() {
         game.setLifeAlive(1,1);
         game.setLifeAlive(2,0);
