@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class Gol {
     private int width, height, generation, random;
-    private int[][] board;
+    public int[][] board;
 
     public Gol(int width, int height, int random) {
         this.width = width;
@@ -90,7 +90,7 @@ public class Gol {
             for (int y = 0; y < height; y++) {
                 int aliveNeighbours = numOfNeighbours(x, y);
 
-                if (getState(x, y) == 1) {
+                if (isAlive(x, y)) {
                     if (aliveNeighbours < 2)
                         newBoard[x][y] = 0; // Less Population
                     else if (aliveNeighbours == 2 || aliveNeighbours == 3)
