@@ -7,7 +7,7 @@ public class Gol {
     public Gol(int width, int height, int random) {
         this.width = width;
         this.height = height;
-        this.generation = 0;
+        this.generation = 1;
         this.random = random;
         initializeBoard();
     }
@@ -117,6 +117,14 @@ public class Gol {
         }
         double population = (sum/totalBlocks)*100;
         return String.format("%.2f%s", population,"%");
+    }
+
+    public void jumpTo(int gen){
+        System.out.println("Initial Position");
+        printBoard();
+        for (int x = 1; x < gen; x++)
+            simulateLife();
+        printBoard();
     }
 
     public void updateBoard(){
