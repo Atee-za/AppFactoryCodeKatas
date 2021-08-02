@@ -14,16 +14,17 @@ public class ConsoleSimulation {
 
         Gol life = new Gol(width, height, random);
 
-        /*Manually Assigning Life
-        life.setLifeAlive(2, 3);
-        life.setLifeAlive(3, 4);
-        life.setLifeAlive(4, 4);
-        life.setLifeAlive(4, 3);
-        life.setLifeAlive(4, 2);
-        */
+        ///*Manually Assigning Life
+        life.setLifeAlive(5, 5);
+        life.setLifeAlive(5, 4);
+        life.setLifeAlive(5, 3);
+        life.setLifeAlive(5, 6);
+        life.setLifeAlive(5, 7);
+        //*/
 
-        for (int i = 0; i < generations; i++) {
+        //life.jumpTo(6);
+        for (int i = 0; i < generations; i++)
             life.updateBoard();
-        }
     }
+
 }
